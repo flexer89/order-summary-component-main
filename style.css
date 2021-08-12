@@ -1,0 +1,169 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Red Hat Display', sans-serif;
+    min-height: 100vh;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    background-color: var(--pale-blue);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 400px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.content {
+    padding: 3rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--dark-blue);
+    padding: 10px;
+    font-weight: 900;
+}
+
+.desc {
+    text-align: center;
+    color: var(--desaturated-blue);
+}
+
+.plan-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    flex-direction: row;
+    padding: 15px 10px;
+    margin: 20px 0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.plan {
+    padding: 0 20px;
+    font-size: 0.85rem;
+}
+
+.plan h3 {
+    color: var(--dark-blue);
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.plan p {
+    color: var(--desaturated-blue);
+    font-size: 0.9rem;
+}
+
+.plan-wrapper a {
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.payment {
+    display: block;
+    text-align: center;
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    box-shadow: rgba(0, 0, 224, 0.15) 0px 14px 28px, rgba(0, 0, 224, 0.15) 0px 10px 20px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.cancel {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+/*---------------------------------Hover---------------------------------*/
+.plan-wrapper a:hover {
+    text-decoration: none;
+    color: hsl(245, 75%, 62%);
+}
+
+.payment:hover {
+    background-color: hsl(245, 85%, 60%)
+}
+
+.cancel:hover {
+    color: var(--dark-blue);
+}
+
+/*--------------------------------Media Queries---------------------------*/
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .desc {
+        padding: 0 20px;
+    }
+
+    .plan-wrapper a {
+        padding: 0 5px 0 0;
+    }
+
+    .plan-wrapper img {
+        width: 32px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+}
+
+.attribution {
+    text-align: center;
+}
